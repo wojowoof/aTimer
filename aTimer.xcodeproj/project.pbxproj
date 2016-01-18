@@ -13,6 +13,8 @@
 		F4D0C3611C44C9DB00CE3055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D0C3601C44C9DB00CE3055 /* Assets.xcassets */; };
 		F4D0C3641C44C9DB00CE3055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D0C3621C44C9DB00CE3055 /* LaunchScreen.storyboard */; };
 		F4D0C36F1C44C9DC00CE3055 /* aTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C36E1C44C9DC00CE3055 /* aTimerTests.swift */; };
+		F4D0C37A1C4854A300CE3055 /* timeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C3791C4854A300CE3055 /* timeInput.swift */; };
+		F4D0C37C1C4C6F5A00CE3055 /* wTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F4D0C36A1C44C9DC00CE3055 /* aTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D0C36E1C44C9DC00CE3055 /* aTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aTimerTests.swift; sourceTree = "<group>"; };
 		F4D0C3701C44C9DC00CE3055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D0C3791C4854A300CE3055 /* timeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeInput.swift; sourceTree = "<group>"; };
+		F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wTicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				F4D0C3601C44C9DB00CE3055 /* Assets.xcassets */,
 				F4D0C3621C44C9DB00CE3055 /* LaunchScreen.storyboard */,
 				F4D0C3651C44C9DB00CE3055 /* Info.plist */,
+				F4D0C3791C4854A300CE3055 /* timeInput.swift */,
+				F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */,
 			);
 			path = aTimer;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 				TargetAttributes = {
 					F4D0C3551C44C9DB00CE3055 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y5498FS427;
 					};
 					F4D0C3691C44C9DC00CE3055 = {
 						CreatedOnToolsVersion = 7.2;
@@ -198,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D0C35C1C44C9DB00CE3055 /* ViewController.swift in Sources */,
+				F4D0C37C1C4C6F5A00CE3055 /* wTicker.swift in Sources */,
+				F4D0C37A1C4854A300CE3055 /* timeInput.swift in Sources */,
 				F4D0C35A1C44C9DB00CE3055 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,10 +336,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = aTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wojones.aTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,10 +350,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = aTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wojones.aTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
