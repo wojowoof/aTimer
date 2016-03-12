@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F483816F1C8BE9E0002208C6 /* revealImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483816E1C8BE9E0002208C6 /* revealImageView.swift */; };
 		F4D0C35A1C44C9DB00CE3055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C3591C44C9DB00CE3055 /* AppDelegate.swift */; };
 		F4D0C35C1C44C9DB00CE3055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C35B1C44C9DB00CE3055 /* ViewController.swift */; };
 		F4D0C35F1C44C9DB00CE3055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D0C35D1C44C9DB00CE3055 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		F4D0C36F1C44C9DC00CE3055 /* aTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C36E1C44C9DC00CE3055 /* aTimerTests.swift */; };
 		F4D0C37A1C4854A300CE3055 /* timeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C3791C4854A300CE3055 /* timeInput.swift */; };
 		F4D0C37C1C4C6F5A00CE3055 /* wTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */; };
+		F4D0C37E1C4EEF9F00CE3055 /* chooseTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C37D1C4EEF9E00CE3055 /* chooseTimeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F483816E1C8BE9E0002208C6 /* revealImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = revealImageView.swift; path = ../revealImageView.swift; sourceTree = "<group>"; };
 		F4D0C3561C44C9DB00CE3055 /* aTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D0C3591C44C9DB00CE3055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D0C35B1C44C9DB00CE3055 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		F4D0C3701C44C9DC00CE3055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D0C3791C4854A300CE3055 /* timeInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeInput.swift; sourceTree = "<group>"; };
 		F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wTicker.swift; sourceTree = "<group>"; };
+		F4D0C37D1C4EEF9E00CE3055 /* chooseTimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chooseTimeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,10 @@
 				F4D0C35B1C44C9DB00CE3055 /* ViewController.swift */,
 				F4D0C35D1C44C9DB00CE3055 /* Main.storyboard */,
 				F4D0C3601C44C9DB00CE3055 /* Assets.xcassets */,
+				F4D0C37D1C4EEF9E00CE3055 /* chooseTimeTableViewController.swift */,
 				F4D0C3621C44C9DB00CE3055 /* LaunchScreen.storyboard */,
 				F4D0C3651C44C9DB00CE3055 /* Info.plist */,
+				F483816E1C8BE9E0002208C6 /* revealImageView.swift */,
 				F4D0C3791C4854A300CE3055 /* timeInput.swift */,
 				F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */,
 			);
@@ -206,6 +212,8 @@
 			files = (
 				F4D0C35C1C44C9DB00CE3055 /* ViewController.swift in Sources */,
 				F4D0C37C1C4C6F5A00CE3055 /* wTicker.swift in Sources */,
+				F4D0C37E1C4EEF9F00CE3055 /* chooseTimeTableViewController.swift in Sources */,
+				F483816F1C8BE9E0002208C6 /* revealImageView.swift in Sources */,
 				F4D0C37A1C4854A300CE3055 /* timeInput.swift in Sources */,
 				F4D0C35A1C44C9DB00CE3055 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +411,7 @@
 				F4D0C3751C44C9DC00CE3055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D0C3761C44C9DC00CE3055 /* Build configuration list for PBXNativeTarget "aTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +420,7 @@
 				F4D0C3781C44C9DC00CE3055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

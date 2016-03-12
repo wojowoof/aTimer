@@ -22,6 +22,7 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     var pickers = [UIPickerView]()
     var minutes = 1
     var seconds = 0
+    var chooseCallback: (() -> Bool)?
 
     // MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
@@ -63,8 +64,33 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         return CGSize(width: 240, height: 60)
     }
 
+    func disableInput() {
+        pickers[0].userInteractionEnabled = false
+        pickers[1].userInteractionEnabled = false
+    }
+
+    func enableInput() {
+        pickers[0].userInteractionEnabled = true
+        pickers[1].userInteractionEnabled = true
+
+    }
+
+    func ticksecs() -> Int {
+        let tickspicked = (pickers[0].selectedRowInComponent(0) * 60) + pickers[1].selectedRowInComponent(0)
+        return tickspicked
+    }
+
+    func setwheels(mins: Int, secs: Int) {
+        print(String(format: "set wheels to %d:%02d", mins, secs))
+        pickers[0].selectRow(mins, inComponent: 0, animated: true)
+        pickers[1].selectRow(secs, inComponent: 0, animated: true)
+    }
+
     // MARK: Pickerview Datasource
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        if (pickerView == pickers[0]) {
+            return 2;
+        }
         print("1 component for ", pickerView);
         return 1
     }
@@ -82,7 +108,7 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        print("Row ", row);
+        // print("Row ", row);
         if (pickerView == pickers[0]) {
             return String(row)
         }
@@ -91,21 +117,10 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("Selected row ", row);
+        if (nil != chooseCallback) {
+            self.chooseCallback!()
+        }
     }
-
-//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        if (1 == component) {
-//            print("sixty rows")
-//            return 60
-//        }
-//        return -1;
-//    }
-//
-//
-//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        print("title: foo")
-//        return "foo"
-//    }
 
     // MARK: Button Action
     func subButtonPressed(button: UIButton) {
