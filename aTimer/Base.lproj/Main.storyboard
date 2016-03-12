@@ -20,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-5F-s08">
-                                <rect key="frame" x="20" y="80" width="560" height="457"/>
+                                <rect key="frame" x="20" y="80" width="560" height="466"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0q-Si-m5O">
-                                        <rect key="frame" x="259" y="0.0" width="43" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="255" y="0.0" width="50" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sI-ka-iNw">
-                                        <rect key="frame" x="145" y="33" width="270" height="50"/>
+                                        <rect key="frame" x="145" y="36" width="270" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-VP-wU1" customClass="timeInput" customModule="aTimer" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -37,6 +37,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrg-Ow-Dc9">
                                                 <rect key="frame" x="240" y="0.0" width="30" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="-&gt;"/>
                                                 <connections>
                                                     <segue destination="GCZ-Ii-AXh" kind="presentation" identifier="XX1" id="ZDt-VQ-fW9"/>
@@ -45,17 +46,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UPs-ny-R20">
-                                        <rect key="frame" x="231" y="95" width="99" height="30"/>
+                                        <rect key="frame" x="224" y="98" width="113" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4w-5y-IZ6">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Go!"/>
                                                 <connections>
                                                     <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n6w-3L-U6Z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huw-9R-f6u" userLabel="Reset Button">
-                                                <rect key="frame" x="60" y="0.0" width="39" height="30"/>
+                                                <rect key="frame" x="62" y="0.0" width="51" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Reset"/>
                                                 <connections>
                                                     <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5XI-xa-dRn"/>
@@ -63,8 +66,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-ud-AMW" customClass="revealImageView" customModule="aTimer" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="137" width="320" height="320"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-ud-AMW" customClass="revealImageView" customModule="aTimer" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="146" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iE0-ud-AMW" secondAttribute="height" multiplier="1:1" id="dtU-kn-osZ"/>

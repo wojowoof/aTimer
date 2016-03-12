@@ -48,21 +48,25 @@ class chooseTimeTableViewController: UITableViewController {
     }
 
     func getChosenTime() -> Int {
-        let chosenrow = self.tableView.indexPathsForSelectedRows![0].item
-        print("Chosen row: ", chosenrow)
-        let cell = self.tableView.cellForRowAtIndexPath(self.tableView.indexPathsForSelectedRows![0])
-        let lbl = cell!.viewWithTag(7) as? UILabel
-        let timestr = lbl!.text!
-        print("Text at chosen row: ", timestr)
+        if let selected = self.tableView.indexPathsForSelectedRows {
+            let chosenrow = selected[0].item
+            print("Chosen row: ", chosenrow)
+            let cell = self.tableView.cellForRowAtIndexPath(selected[0])
+            let lbl = cell!.viewWithTag(7) as? UILabel
+            let timestr = lbl!.text!
+            print("Text at chosen row: ", timestr)
 
-        let dateformatter = NSDateFormatter()
-        dateformatter.dateFormat = "mm:ss"
-        dateformatter.timeZone = NSTimeZone(abbreviation: "UTC")
-        let date = dateformatter.dateFromString(timestr)
-        let cal = NSCalendar.currentCalendar()
-        let minsec = cal.components([NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date!);
-        print("chosen: min \(minsec.minute), \(minsec.second)")
-        return (60 * minsec.minute) + minsec.second
+            let dateformatter = NSDateFormatter()
+            dateformatter.dateFormat = "mm:ss"
+            dateformatter.timeZone = NSTimeZone(abbreviation: "UTC")
+            let date = dateformatter.dateFromString(timestr)
+            let cal = NSCalendar.currentCalendar()
+            let minsec = cal.components([NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date!);
+            print("chosen: min \(minsec.minute), \(minsec.second)")
+            return (60 * minsec.minute) + minsec.second
+        } else {
+            return -1
+        }
     }
 
     // MARK: - Table view data source

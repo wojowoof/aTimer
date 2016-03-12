@@ -52,6 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         enterTimeLabel.text = "Ready!"
         goButton.setTitle("Start", forState: .Normal)
         timeChooseButton.enabled = true
+        timeChooseButton.userInteractionEnabled = true
         timeInputView.enableInput()
         self.imageView.coverPercent(0.00)
     }
@@ -60,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         enterTimeLabel.text = "Done!"
         goButton.setTitle("---", forState: .Normal)
         timeChooseButton.enabled = true
+        timeChooseButton.userInteractionEnabled = true
         timeInputView.enableInput()
     }
 
@@ -67,6 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         enterTimeLabel.text = "Running!"
         goButton.setTitle("Pause", forState: .Normal)
         timeChooseButton.enabled = false
+        timeChooseButton.userInteractionEnabled = false
         timeInputView.disableInput()
     }
 
@@ -74,6 +77,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         enterTimeLabel.text = "Paused"
         goButton.setTitle("Continue", forState: .Normal)
         timeChooseButton.enabled = false
+        timeChooseButton.userInteractionEnabled = false
         print("timechoosebuttin.enabled is \(timeChooseButton.enabled)")
         timeInputView.disableInput()
     }
@@ -133,9 +137,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("segue source: ", choosetime)
             let timechosen = choosetime.getChosenTime()
             print("chosen time: ", timechosen)
-            setpickerto(timechosen / 60, sec: timechosen % 60)
-            print("Set ready state")
-            setReadyState()
+            if (0 < timechosen) {
+                setpickerto(timechosen / 60, sec: timechosen % 60)
+                print("Set ready state")
+                setReadyState()
+            }
         }
     }
 

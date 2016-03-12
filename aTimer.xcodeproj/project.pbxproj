@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F483816F1C8BE9E0002208C6 /* revealImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483816E1C8BE9E0002208C6 /* revealImageView.swift */; };
+		F48381711C93ECEE002208C6 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = F48381701C93ECEE002208C6 /* TODO.txt */; };
 		F4D0C35A1C44C9DB00CE3055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C3591C44C9DB00CE3055 /* AppDelegate.swift */; };
 		F4D0C35C1C44C9DB00CE3055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D0C35B1C44C9DB00CE3055 /* ViewController.swift */; };
 		F4D0C35F1C44C9DB00CE3055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D0C35D1C44C9DB00CE3055 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		F483816E1C8BE9E0002208C6 /* revealImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = revealImageView.swift; path = ../revealImageView.swift; sourceTree = "<group>"; };
+		F48381701C93ECEE002208C6 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		F4D0C3561C44C9DB00CE3055 /* aTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D0C3591C44C9DB00CE3055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D0C35B1C44C9DB00CE3055 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				F483816E1C8BE9E0002208C6 /* revealImageView.swift */,
 				F4D0C3791C4854A300CE3055 /* timeInput.swift */,
 				F4D0C37B1C4C6F5A00CE3055 /* wTicker.swift */,
+				F48381701C93ECEE002208C6 /* TODO.txt */,
 			);
 			path = aTimer;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48381711C93ECEE002208C6 /* TODO.txt in Resources */,
 				F4D0C3641C44C9DB00CE3055 /* LaunchScreen.storyboard in Resources */,
 				F4D0C3611C44C9DB00CE3055 /* Assets.xcassets in Resources */,
 				F4D0C35F1C44C9DB00CE3055 /* Main.storyboard in Resources */,

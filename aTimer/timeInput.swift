@@ -22,6 +22,7 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     var pickers = [UIPickerView]()
     var minutes = 1
     var seconds = 0
+    let titleattrs = [NSFontAttributeName:UIFont(name: "Chalkduster", size: 40.0)!, NSForegroundColorAttributeName:UIColor.redColor()]
     var chooseCallback: (() -> Bool)?
 
     // MARK: Initialization
@@ -35,6 +36,7 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
 //        self.backgroundColor = UIColor.redColor()
 
         let pck_m = UIPickerView(frame: CGRect(x:0, y:0, width:60, height:44))
+
         //pck_m.backgroundColor = UIColor.blueColor()
         pck_m.dataSource = self
         pck_m.delegate = self
@@ -61,7 +63,7 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     override func intrinsicContentSize() -> CGSize {
-        return CGSize(width: 240, height: 60)
+        return CGSize(width: 200, height: 100)
     }
 
     func disableInput() {
@@ -107,12 +109,16 @@ class timeInput: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
         return 60
     }
 
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         // print("Row ", row);
         if (pickerView == pickers[0]) {
-            return String(row)
+            // return String(row)
+            return NSAttributedString(string: String(format:"%d", row), attributes: titleattrs)
+                // attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 20.0)!, NSForegroundColorAttributeName:UIColor.redColor()])
         }
-        return String(format: "%02d", row);
+        //return String(format: "%02d", row);
+        return NSAttributedString(string: String(format:"%02d", row), attributes: titleattrs)
+            // attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 20.0)!, NSForegroundColorAttributeName:UIColor.redColor()])
     }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

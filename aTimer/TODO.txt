@@ -1,0 +1,10 @@
+* Relayout and prettify the whole thing
+* Figure out the "Invalid component  1  in picker  <UIPickerView: ...." warning
+** This is my own warning! See numberOfRowsInComponent in timeInput; where did these magic values come from? (google, really)
+* Really need to vastly improve the timeInput (picker-based) widget - intrinsic size, layoutSubviews, etc.
+* Rework the timeInput widget so it gives bigger fonts - maybe views rather than titles?
+* Remember - you have a Github project for this, push updates so you can develop on multiple devices
+
+DONE
+
+* BUG: when using the time choose segue, you can hit "Done" when no rows are selected; bang, assert in getChosenTime (nothing selected)
