@@ -4,6 +4,9 @@
 * Really need to vastly improve the timeInput (picker-based) widget - intrinsic size, layoutSubviews, etc.
 * Rework the timeInput widget so it gives bigger fonts - maybe views rather than titles?
 * Remember - you have a Github project for this, push updates so you can develop on multiple devices
+* Rotation - need landscape layout
+* Noise/other distraction on completion?
+* Backport to iOS 7.X (deal with UIStackview -> OAStackview, and "no embedded dynamic frameworks" problem)
 
 DONE
 
